@@ -30,13 +30,9 @@ def assign_family(k_cl, k_db):
   return aparece
 
 # classificar familia do organismo usando versao or
-def assign_family_or_op(aparece, k_cl):
-  with open('nomes_fam.txt', "r") as arquivo:
-    fam = set()
-    for linha in arquivo:
-      fam.add(linha.strip())
+def assign_family_or_op(aparece, k_cl, all_families):
   aparece2 = {}
-  for fam_nome in fam:
+  for fam_nome in all_families:
     aparece2[fam_nome] = {k_mer: 0 for k_mer in k_cl.keys()}
   for a_key, a_val in aparece.items():
     fam_nome = a_key.split(" ")[0]
