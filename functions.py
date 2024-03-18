@@ -35,7 +35,8 @@ def assign_family_or_op(aparece, k_cl, all_families):
   for fam_nome in all_families:
     aparece2[fam_nome] = {k_mer: 0 for k_mer in k_cl.keys()}
   for a_key, a_val in aparece.items():
-    fam_nome = a_key.split(" ")[0]
+    fam_nome = a_key.split()[0].strip()
     for k_mer, freq in a_val.items():
-      aparece2[fam_nome][k_mer] = 1 if freq == 1 else 0
+      if freq == 1:
+        aparece2[fam_nome][k_mer] = 1
   return aparece2
