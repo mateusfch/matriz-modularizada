@@ -1,7 +1,10 @@
 # Byte-compiled / optimized / DLL files
-__pycache__
+__pycache__/
 *.py[cod]
 *$py.class
+t.xlsx
+1.txt
+planilhas_teste/
 
 # C extensions
 *.so
