@@ -38,7 +38,7 @@ df['Sumif 1'] = df.iloc[:, 1:].sum(axis=1)
 df.sort_values(by=['Sumif 1'],ascending=False, inplace=True)
 
 # Print the top 50 results
-print(df['results'].head(50))
+print(df['Sumif 1'].head(50))
 
 # Export the DataFrame to an Excel file
 df.to_excel('assignment.xlsx', index=True)
